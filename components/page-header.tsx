@@ -40,9 +40,18 @@ export default function PageHeader() {
             </button>
           </div>
         </div>
-        <Link href="/" className=" -ml-8 p-1.5">
+        <Link href="/" className=" lg:-ml-8 lg:p-1.5">
           <span className="sr-only">Your Company</span>
           <Image
+              className='flex lg:hidden'
+              src="/logo-no-background.png"
+              alt="Company Logo"
+              width={250}
+              height={12}
+              priority
+            />
+            <Image
+              className='hidden lg:flex'
               src="/logo-no-background.png"
               alt="Company Logo"
               width={350}
@@ -79,10 +88,13 @@ export default function PageHeader() {
             <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <Image
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
+              className='flex lg:hidden'
+              src="/logo-no-background.png"
+              alt="Company Logo"
+              width={250}
+              height={12}
+              priority
+            />
             </Link>
             <div className="flex flex-1 justify-end">
               <a href="#" className="text-sm font-semibold leading-6 text-gray-900">

@@ -26,7 +26,7 @@ export default async function Home() {
       <h2 className={`mb-3 text-2xl font-semibold`}>
             Explore All Projects
       </h2>
-      <ul className="grid gap-4 grid-cols-3 grid-rows-3">
+      <ul className="grid gap-4 grid-cols-1 md:grid-cols-3 grid-rows-3">
         {projects?.map((project) => (
           <li key={project.id}>
             <Link href={`/project/${project.slug}`}>
@@ -42,7 +42,7 @@ export default async function Home() {
                     "aspect-video"
                   )}/>
                     <CardTitle>{project.name}</CardTitle>
-                    <CardDescription>{project.created_by}</CardDescription>
+                    <CardDescription className=" truncate">{project.created_by}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p>{project.about}</p>
